@@ -1,6 +1,4 @@
-import type {
-  ErrorRequestHandler,
-} from "express";
+import type { ErrorRequestHandler } from "express";
 import { AppError } from "../utils/AppError";
 
 export const errorHandler: ErrorRequestHandler = (
@@ -23,11 +21,16 @@ export const errorHandler: ErrorRequestHandler = (
 
   console.error("Unhandled error:", error);
 
+  const message =
+    error instanceof Error
+      ? error.message
+      : String(error);
+
   res.status(500).json({
     success: false,
     error: {
       code: "INTERNAL_SERVER_ERROR",
-      message: "An unexpected error occurred",
+      message,
     },
   });
 };
