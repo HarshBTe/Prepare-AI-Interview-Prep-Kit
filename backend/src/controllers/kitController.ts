@@ -741,29 +741,69 @@ export async function regenerateKitSection(
           question.category === section
       );
 
-    /*
-     * -----------------------------------------
-     * 2. PRESERVE HUMAN WORK
-     * -----------------------------------------
-     *
-     * Never replace:
-     *
-     * - user_added
-     * - user_edited
-     * - pinned
-     */
+/* 
+ * -----------------------------------------
+ * 2. PRESERVE HUMAN WORK + COVERAGE
+ * -----------------------------------------
+ *
+ * Never replace:
+ *
+ * - user_added
+ * - user_edited
+ * - pinned
+ *
+ * Also preserve a generated question when it
+ * is the only question currently covering a
+ * MUST requirement.
+ */
 
-    const preservedQuestions =
-      sectionQuestions.filter((question) => {
-        const metadata =
-          currentMeta.questions[question.id];
+const allRequirements = currentKit.role.requirements;
 
-        return (
-          metadata?.origin === "user_added" ||
-          metadata?.origin === "user_edited" ||
-          metadata?.isPinned === true
-        );
-      });
+const mustRequirementIds = new Set(
+  allRequirements
+    .filter((requirement) => requirement.priority === "must")
+    .map((requirement) => requirement.id)
+);
+
+// Count how many questions currently cover each MUST requirement
+const mustCoverageCount = new Map<string, number>();
+
+for (const question of currentKit.questions) {
+  for (const requirementId of question.requirement_ids) {
+    if (mustRequirementIds.has(requirementId)) {
+      mustCoverageCount.set(
+        requirementId,
+        (mustCoverageCount.get(requirementId) ?? 0) + 1
+      );
+    }
+  }
+}
+
+const preservedQuestions = sectionQuestions.filter((question) => {
+  const metadata = currentMeta.questions[question.id];
+
+  // Always preserve human work
+  if (
+    metadata?.origin === "user_added" ||
+    metadata?.origin === "user_edited" ||
+    metadata?.isPinned === true
+  ) {
+    return true;
+  }
+
+  // Preserve generated questions that are the only
+  // question covering a MUST requirement.
+  const isOnlyCoverageForMustRequirement =
+    question.requirement_ids.some((requirementId) => {
+      if (!mustRequirementIds.has(requirementId)) {
+        return false;
+      }
+
+      return mustCoverageCount.get(requirementId) === 1;
+    });
+
+  return isOnlyCoverageForMustRequirement;
+});
 
     /*
      * -----------------------------------------
@@ -807,6 +847,14 @@ export async function regenerateKitSection(
   currentKit.role.requirements,
   mergedQuestions
 );
+
+if (coverageResult.uncoveredRequirementIds.length > 0) {
+  throw new AppError(
+    `Regeneration left requirements uncovered: ${coverageResult.uncoveredRequirementIds.join(", ")}`,
+    400,
+    "REGENERATION_COVERAGE_FAILED"
+  );
+}
 
 const coverage = {
   uncovered_requirement_ids:
