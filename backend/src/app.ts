@@ -13,6 +13,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:3001",
+  "https://ai-interview-prep-kit-a5jk.onrender.com",
   process.env.FRONTEND_URL,
 ].filter(Boolean);
 
