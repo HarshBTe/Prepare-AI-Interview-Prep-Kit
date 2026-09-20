@@ -1,0 +1,18 @@
+[
+  {
+    "id": "case-001",
+    "jd": "We are looking for a Junior Frontend Developer with strong React, TypeScript, JavaScript, HTML, CSS and REST API experience. The candidate should have experience building responsive web applications and integrating REST APIs.",
+    "company_url": "https://example.com",
+    "days": 5,
+    "role": "Frontend Developer",
+    "location": "India"
+  },
+  {
+    "id": "case-002",
+    "jd": "We are looking for a Backend Developer with experience in Node.js, Express.js, MongoDB, REST APIs and authentication. The candidate should be comfortable designing APIs, working with databases and implementing secure authentication.",
+    "company_url": "https://example.com",
+    "days": 7,
+    "role": "Backend Developer",
+    "location": "India"
+  }
+]

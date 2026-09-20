@@ -1,0 +1,511 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-09-19T15:59:50.370Z",
+  "kits": [
+    {
+      "id": "case-001",
+      "status": "ok",
+      "kit": {
+        "source": {
+          "company": "Example",
+          "company_url": "https://example.com/",
+          "role": "Frontend Developer",
+          "location": "India",
+          "jd_chars": 225,
+          "researched_at": "2026-09-19T15:59:16.890Z",
+          "pages_used": [
+            "https://example.com/"
+          ]
+        },
+        "company_brief": {
+          "summary": "Example Domain is a placeholder domain used for documentation examples and does not represent an operational company.",
+          "what_they_do": "It serves as a placeholder domain for documentation and examples, not intended for operational use.",
+          "sources": [
+            "https://example.com/"
+          ]
+        },
+        "role": {
+          "title": "Junior Frontend Developer",
+          "seniority": "Junior",
+          "responsibilities": [
+            "Build responsive web applications",
+            "Integrate REST APIs"
+          ],
+          "requirements": [
+            {
+              "id": "req-technical-001",
+              "text": "Experience with React",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "req-technical-002",
+              "text": "Experience with TypeScript",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "req-technical-003",
+              "text": "Experience with JavaScript",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "req-technical-004",
+              "text": "Experience with HTML",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "req-technical-005",
+              "text": "Experience with CSS",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "req-technical-006",
+              "text": "Experience with REST APIs",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "req-technical-007",
+              "text": "Experience integrating REST APIs",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "req-technical-008",
+              "text": "Experience building responsive web applications",
+              "kind": "technical",
+              "priority": "must"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "id": "q-001",
+            "requirement_ids": [
+              "req-technical-001"
+            ],
+            "category": "technical",
+            "prompt": "How have you used React to build component-based UIs?",
+            "answer_outline": "I have built reusable components, managed state with hooks, and implemented routing.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-002",
+            "requirement_ids": [
+              "req-technical-002"
+            ],
+            "category": "technical",
+            "prompt": "Describe your experience writing type-safe code with TypeScript in React projects.",
+            "answer_outline": "I use interfaces, generics, and strict typing to catch errors early.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-003",
+            "requirement_ids": [
+              "req-technical-003"
+            ],
+            "category": "technical",
+            "prompt": "What core JavaScript concepts do you rely on when developing web applications?",
+            "answer_outline": "I rely on ES6 modules, async/await, and functional programming patterns.",
+            "difficulty": 1
+          },
+          {
+            "id": "q-004",
+            "requirement_ids": [
+              "req-technical-004",
+              "req-technical-005"
+            ],
+            "category": "technical",
+            "prompt": "Explain how you structure HTML and CSS to create responsive layouts.",
+            "answer_outline": "I use semantic HTML, flexbox/grid, and media queries to adapt to screen sizes.",
+            "difficulty": 1
+          },
+          {
+            "id": "q-005",
+            "requirement_ids": [
+              "req-technical-006"
+            ],
+            "category": "technical",
+            "prompt": "How do you consume REST APIs in a frontend application?",
+            "answer_outline": "I fetch data with fetch/axios, handle loading and errors, and update state.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-006",
+            "requirement_ids": [
+              "req-technical-007",
+              "req-technical-008"
+            ],
+            "category": "technical",
+            "prompt": "Describe a project where you integrated REST APIs and built a responsive UI.",
+            "answer_outline": "I designed a dashboard that fetched data from an API and rendered it responsively across devices.",
+            "difficulty": 3
+          }
+        ],
+        "flashcards": [
+          {
+            "id": "fc-001",
+            "front": "How have you used React to build component-based UIs?",
+            "back": "I create reusable components, manage state with hooks, and compose them into pages, using props and context for data flow.",
+            "requirement_ids": [
+              "req-technical-001"
+            ]
+          },
+          {
+            "id": "fc-002",
+            "front": "Describe your experience writing type-safe code with TypeScript in React projects.",
+            "back": "I define interfaces for props and state, use generics for reusable components, and enable strict mode to catch errors early.",
+            "requirement_ids": [
+              "req-technical-002"
+            ]
+          },
+          {
+            "id": "fc-003",
+            "front": "What core JavaScript concepts do you rely on when developing web applications?",
+            "back": "I use ES6+ features like arrow functions, destructuring, async/await, and modules, along with closures and prototypes for logic.",
+            "requirement_ids": [
+              "req-technical-003"
+            ]
+          },
+          {
+            "id": "fc-004",
+            "front": "Explain how you structure HTML and CSS to create responsive layouts?",
+            "back": "I use semantic HTML5 tags, flexbox/grid for layout, media queries for breakpoints, and mobile-first design.",
+            "requirement_ids": [
+              "req-technical-004",
+              "req-technical-005"
+            ]
+          },
+          {
+            "id": "fc-005",
+            "front": "How do you consume REST APIs in a frontend application?",
+            "back": "I use fetch or axios with async/await, handle loading and error states, and store responses in component state or context.",
+            "requirement_ids": [
+              "req-technical-006"
+            ]
+          },
+          {
+            "id": "fc-006",
+            "front": "Describe a project where you integrated REST APIs and built a responsive UI?",
+            "back": "I built a dashboard that fetched data from a REST API, displayed it in responsive cards using React and CSS Grid, and updated in real-time with websockets.",
+            "requirement_ids": [
+              "req-technical-007",
+              "req-technical-008"
+            ]
+          }
+        ],
+        "schedule": {
+          "days_available": 5,
+          "days": [
+            {
+              "day": 1,
+              "focus": "Technical preparation",
+              "question_ids": [
+                "q-006",
+                "q-004"
+              ],
+              "minutes": 65
+            },
+            {
+              "day": 2,
+              "focus": "Technical preparation",
+              "question_ids": [
+                "q-001",
+                "q-005"
+              ],
+              "minutes": 60
+            },
+            {
+              "day": 3,
+              "focus": "Technical preparation",
+              "question_ids": [
+                "q-002",
+                "q-003"
+              ],
+              "minutes": 50
+            },
+            {
+              "day": 4,
+              "focus": "Review and interview preparation",
+              "question_ids": [
+                "q-006"
+              ],
+              "minutes": 15
+            },
+            {
+              "day": 5,
+              "focus": "Review and interview preparation",
+              "question_ids": [
+                "q-001"
+              ],
+              "minutes": 15
+            }
+          ]
+        },
+        "coverage": {
+          "uncovered_requirement_ids": [],
+          "passes": 1
+        }
+      }
+    },
+    {
+      "id": "case-002",
+      "status": "ok",
+      "kit": {
+        "source": {
+          "company": "Example",
+          "company_url": "https://example.com/",
+          "role": "Backend Developer",
+          "location": "India",
+          "jd_chars": 232,
+          "researched_at": "2026-09-19T15:59:50.369Z",
+          "pages_used": [
+            "https://example.com/"
+          ]
+        },
+        "company_brief": {
+          "summary": "Example Domain is a placeholder domain used for documentation examples and does not represent an operational company.",
+          "what_they_do": "It serves as a placeholder domain for documentation and examples, and is not intended for operational use.",
+          "sources": [
+            "https://example.com/"
+          ]
+        },
+        "role": {
+          "title": "Backend Developer",
+          "seniority": "Not specified",
+          "responsibilities": [
+            "Design APIs",
+            "Work with databases",
+            "Implement secure authentication"
+          ],
+          "requirements": [
+            {
+              "id": "req-technical-001",
+              "text": "Experience with Node.js",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "req-technical-002",
+              "text": "Experience with Express.js",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "req-technical-003",
+              "text": "Experience with MongoDB",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "req-technical-004",
+              "text": "Experience with REST APIs",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "req-technical-005",
+              "text": "Experience with authentication",
+              "kind": "technical",
+              "priority": "must"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "id": "q-001",
+            "requirement_ids": [
+              "req-technical-001",
+              "req-technical-002"
+            ],
+            "category": "technical",
+            "prompt": "Explain how you would set up a basic Node.js server using Express.js.",
+            "answer_outline": "Describe creating an Express app, setting up middleware, and starting the server.",
+            "difficulty": 1
+          },
+          {
+            "id": "q-002",
+            "requirement_ids": [
+              "req-technical-003",
+              "req-technical-005"
+            ],
+            "category": "technical",
+            "prompt": "How would you design a MongoDB schema for storing user profiles with authentication data?",
+            "answer_outline": "Outline collections, fields, indexes, and password hashing.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-003",
+            "requirement_ids": [
+              "req-technical-004"
+            ],
+            "category": "technical",
+            "prompt": "Describe how you would implement RESTful endpoints for CRUD operations on a resource.",
+            "answer_outline": "Explain HTTP methods, status codes, and route structure.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-004",
+            "requirement_ids": [
+              "req-technical-005"
+            ],
+            "category": "technical",
+            "prompt": "What strategies would you use to secure an Express.js API?",
+            "answer_outline": "Mention JWT, rate limiting, input validation, and CORS.",
+            "difficulty": 3
+          },
+          {
+            "id": "q-005",
+            "requirement_ids": [
+              "req-technical-001"
+            ],
+            "category": "technical",
+            "prompt": "How do you handle errors and logging in a Node.js application?",
+            "answer_outline": "Use middleware, winston, and centralized error handling.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-006",
+            "requirement_ids": [
+              "req-technical-001",
+              "req-technical-002",
+              "req-technical-003",
+              "req-technical-004",
+              "req-technical-005"
+            ],
+            "category": "system-design",
+            "prompt": "Design a secure, scalable REST API using Node.js, Express.js, MongoDB, and authentication.",
+            "answer_outline": "Outline architecture, microservices, load balancing, and security layers.",
+            "difficulty": 3
+          }
+        ],
+        "flashcards": [
+          {
+            "id": "fc-001",
+            "front": "How to set up a basic Node.js server with Express?",
+            "back": "Initialize npm, install express, create app.js, use app.listen, add middleware.",
+            "requirement_ids": [
+              "req-technical-001",
+              "req-technical-002"
+            ]
+          },
+          {
+            "id": "fc-002",
+            "front": "Design MongoDB schema for user profiles with auth.",
+            "back": "Define User collection with fields: username, email, passwordHash, roles, timestamps.",
+            "requirement_ids": [
+              "req-technical-003",
+              "req-technical-005"
+            ]
+          },
+          {
+            "id": "fc-003",
+            "front": "Implement RESTful CRUD endpoints.",
+            "back": "Use Express routes: GET, POST, PUT, DELETE; map to controller functions; validate input.",
+            "requirement_ids": [
+              "req-technical-004"
+            ]
+          },
+          {
+            "id": "fc-004",
+            "front": "Secure an Express API.",
+            "back": "Use helmet, rate limiting, input sanitization, JWT auth, HTTPS, CORS policies.",
+            "requirement_ids": [
+              "req-technical-005"
+            ]
+          },
+          {
+            "id": "fc-005",
+            "front": "Handle errors and logging in Node.js.",
+            "back": "Use middleware for error handling, Winston or Morgan for logging, structured logs, environment-based log levels.",
+            "requirement_ids": [
+              "req-technical-001"
+            ]
+          },
+          {
+            "id": "fc-006",
+            "front": "Design a secure, scalable REST API with Node.js, Express, MongoDB, auth.",
+            "back": "Combine modular architecture, JWT, role-based access, connection pooling, horizontal scaling, monitoring.",
+            "requirement_ids": [
+              "req-technical-001",
+              "req-technical-002",
+              "req-technical-003",
+              "req-technical-004",
+              "req-technical-005"
+            ]
+          }
+        ],
+        "schedule": {
+          "days_available": 7,
+          "days": [
+            {
+              "day": 1,
+              "focus": "System design and technical preparation",
+              "question_ids": [
+                "q-006"
+              ],
+              "minutes": 60
+            },
+            {
+              "day": 2,
+              "focus": "Technical preparation",
+              "question_ids": [
+                "q-004"
+              ],
+              "minutes": 45
+            },
+            {
+              "day": 3,
+              "focus": "Technical preparation",
+              "question_ids": [
+                "q-002",
+                "q-001"
+              ],
+              "minutes": 50
+            },
+            {
+              "day": 4,
+              "focus": "Technical preparation",
+              "question_ids": [
+                "q-003"
+              ],
+              "minutes": 30
+            },
+            {
+              "day": 5,
+              "focus": "Technical preparation",
+              "question_ids": [
+                "q-005"
+              ],
+              "minutes": 30
+            },
+            {
+              "day": 6,
+              "focus": "Review and interview preparation",
+              "question_ids": [
+                "q-004"
+              ],
+              "minutes": 15
+            },
+            {
+              "day": 7,
+              "focus": "Review and interview preparation",
+              "question_ids": [
+                "q-006"
+              ],
+              "minutes": 15
+            }
+          ]
+        },
+        "coverage": {
+          "uncovered_requirement_ids": [],
+          "passes": 1
+        }
+      }
+    }
+  ]
+}
